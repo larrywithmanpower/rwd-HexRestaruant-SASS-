@@ -1,0 +1,100 @@
+//* txt replaceing image
+@mixin hiddenTxt {
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+//* breakpoint
+@mixin pad {
+    @media(max-width: 767px) {
+        @content
+    }
+}
+
+@mixin mobile {
+    @media(max-width: 414px) {
+        @content
+    }
+}
+
+@mixin other($width) {
+    @media(max-width: $width) {
+        @content
+    }
+}
+
+//* burger 
+//* using method in codepen
+@mixin burger($width: 30px, $height: 5px, $gutter: 5px, $color: #fff, $border-radius: 5px, $transition-duration: .3s) {
+    position: relative;
+    margin-top: $height + $gutter;
+    margin-bottom: $height + $gutter;
+
+    &,
+    &::before,
+    &::after {
+        position: absolute;
+        display: block;
+        width: $width;
+        height: $height;
+        background-color: $color;
+        border-radius: $border-radius;
+        box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+        transition: all $transition-duration;
+    }
+
+    &::before,
+    &::after {
+        content: '';
+    }
+
+    &::before {
+        transform: translateY(-($height + $gutter));
+    }
+
+    &::after {
+        transform: translateY(($height + $gutter));
+    }
+}
+
+@mixin burger-to-cross($color: #fff) {
+    & {
+        transform: translateX(-30px);
+        background: transparent;
+        box-shadow: none;
+    }
+
+    &::before {
+        transform: rotate(45deg) translate(25px, -25px);
+    }
+
+    &::after {
+        transform: rotate(-45deg) translate(25px, 25px);
+    }
+}
+
+//* decoration line
+//* using method in codepen
+@mixin decorationLine($width: 20px, $height: 1px, $color: #000, $top: 0, $right: 0, $left: 0, $bottom: 0) {
+    position: relative;
+    display: block;
+
+    &::before,
+    &::after {
+        position: absolute;
+        content: '';
+        width: $width;
+        height: $height;
+        background-color: $color;
+        top: $top;
+    }
+
+    &::before {
+        left: $left;
+    }
+
+    &::after {
+        right: $right;
+    }
+}

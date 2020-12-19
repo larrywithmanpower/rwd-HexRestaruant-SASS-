@@ -1,0 +1,50 @@
+// flex
+
+.d-flex {
+    display: flex;
+}
+
+.jc-spar {
+    justify-content: space-around;
+}
+
+.jc-spab {
+    justify-content: space-between;
+}
+
+.jc-spae {
+    justify-content: space-evenly;
+}
+
+.ai-c {
+    align-items: center;
+}
+
+// clearfix
+.clearfix {
+    clear: both;
+}
+
+// txt type
+
+.txt-w {
+    font-weight: bold;
+}
+
+//  padding & margin
+
+.p-10 {
+    padding: 10px;
+}
+
+.mr-30 {
+    margin-right: 30px;
+}
+
+// z-index
+
+.z-99 {
+    z-index: 99;
+}
+
+

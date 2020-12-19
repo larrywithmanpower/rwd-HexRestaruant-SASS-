@@ -1,0 +1,64 @@
+.navBar {
+    background-color: $bg-nav;
+    position: relative;
+    padding-right: 1rem;
+    padding-left: 1rem;
+
+    @include pad {
+        padding-bottom: 1rem;
+        padding-left: .7rem;
+    }
+
+    &__logo {
+        width: 120px;
+        height: 24px;
+        margin-top: 1rem;
+        margin-left: 0.5rem;
+        background: url(../images/logo_w@svg.svg) no-repeat;
+        @include hiddenTxt;
+    }
+
+    &__nav {
+        @include pad {
+            flex-direction: column;
+            position: absolute;
+            top: 4rem;
+            right: 0;
+            left: 0;
+            text-align: center;
+            background-color: $bg-nav;
+        }
+        &__list {
+            margin-right: .3rem;
+            font-weight: bold;
+
+            @include pad {
+                // max-height: 0;
+            }
+        }
+        a {
+            padding: 1.2rem;
+        }
+    }
+
+    &__burger {
+        display: none;
+        position: absolute;
+        top: .9rem;
+        right: 4rem;
+        // display: inline-block;
+        background-color: $bg-secondary;
+        cursor: pointer;
+
+        @include pad {
+            display: block;
+        }
+
+        &__icon {
+            @include burger(30px, 4px, 7px, $bg-secondary, 5px, .3s);
+        }
+        &--open .navBar__burger__icon{
+            @include burger-to-cross($bg-secondary);
+        }
+    }
+}

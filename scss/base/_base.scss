@@ -3,5 +3,26 @@ html {
 }
 
 body {
+    font-family: "微軟正黑體", "Microsoft JhengHei", "Segoe UI Semibold", "Segoe UI", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
     background: $bg-primary;
+    color: $txt-primary;
 }
+
+a {
+    display: block;
+    text-decoration: none;
+    color: $txt-link;
+    &:hover {
+        color: $txt-hover;
+    }
+}
+
+h2 {
+    font-size: $fz-xxl;
+}
+
+.wrap {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+

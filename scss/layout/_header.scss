@@ -1,0 +1,22 @@
+.header {
+    background: url(../images/header_desktop.png) no-repeat center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 100px 0;
+    text-align: center;
+    color: $txt-secondary;    
+    .slogan__title {
+        display: inline-block;
+        padding: 30px;
+        font-size: $fz-xxl;
+        line-height: 1em;
+        background: $bg-nav;
+        border-radius: 15px;
+        .slogan__txt {
+            font-size: $fz-l;
+            margin-top: 20px;
+        }
+    }
+}

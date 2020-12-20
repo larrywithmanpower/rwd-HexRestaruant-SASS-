@@ -7,6 +7,9 @@
     @include pad {
         padding-bottom: 1rem;
         padding-left: .7rem;
+        &.is-show &__nav {
+            max-height: 500px;
+        }
     }
 
     &__logo {
@@ -16,37 +19,73 @@
         margin-left: 0.5rem;
         background: url(../images/logo_w@svg.svg) no-repeat;
         @include hiddenTxt;
-    }
+    }   
 
     &__nav {
         @include pad {
             flex-direction: column;
             position: absolute;
-            top: 4rem;
+            top: 3rem;
             right: 0;
             left: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 1s;
             text-align: center;
-            background-color: $bg-nav;
+            background-color: $bg-nav-mb;
         }
         &__list {
             margin-right: .3rem;
             font-weight: bold;
-
             @include pad {
-                // max-height: 0;
+                
+            }  
+            &:hover {
+                ul {
+                    display: block;
+                    @include pad {
+                    display: none;
+                    }  
+                }                            
             }
+            &--featureMb {
+                display: none;    
+                font-weight: bold; 
+                @include pad{
+                    display: block;
+                    max-height: 0;
+                    overflow: hidden;
+                    transition: all 1s ease;
+                    &.is-open {
+                        margin-right: .4rem;
+                        max-height: 300px;
+                    }
+                }             
+            }                      
         }
         a {
             padding: 1.2rem;
+            i {
+                margin-left: 1rem;
+            }
+        }
+    .nav__list--feature {
+        display: none;
+        position: absolute;
+        top: 3rem;
+        padding: 0 1rem;
+        background-color: $bg-nav;
         }
     }
 
+
+
+// * burgerMenu
     &__burger {
         display: none;
         position: absolute;
         top: .9rem;
         right: 4rem;
-        // display: inline-block;
         background-color: $bg-secondary;
         cursor: pointer;
 
@@ -57,7 +96,7 @@
         &__icon {
             @include burger(30px, 4px, 7px, $bg-secondary, 5px, .3s);
         }
-        &--open .navBar__burger__icon{
+        &.is-open .navBar__burger__icon{
             @include burger-to-cross($bg-secondary);
         }
     }

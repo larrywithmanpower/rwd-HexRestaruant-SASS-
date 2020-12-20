@@ -565,6 +565,9 @@ a.pure-button-selected {
     padding-bottom: 1rem;
     padding-left: .7rem;
   }
+  .navBar.is-show .navBar__nav {
+    max-height: 500px;
+  }
 }
 
 .navBar__logo {
@@ -585,11 +588,15 @@ a.pure-button-selected {
         -ms-flex-direction: column;
             flex-direction: column;
     position: absolute;
-    top: 4rem;
+    top: 3rem;
     right: 0;
     left: 0;
+    max-height: 0;
+    overflow: hidden;
+    -webkit-transition: all 1s;
+    transition: all 1s;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: #000;
   }
 }
 
@@ -598,8 +605,49 @@ a.pure-button-selected {
   font-weight: bold;
 }
 
+.navBar__nav__list:hover ul {
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .navBar__nav__list:hover ul {
+    display: none;
+  }
+}
+
+.navBar__nav__list--featureMb {
+  display: none;
+  font-weight: bold;
+}
+
+@media (max-width: 767px) {
+  .navBar__nav__list--featureMb {
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+  }
+  .navBar__nav__list--featureMb.is-open {
+    margin-right: .4rem;
+    max-height: 300px;
+  }
+}
+
 .navBar__nav a {
   padding: 1.2rem;
+}
+
+.navBar__nav a i {
+  margin-left: 1rem;
+}
+
+.navBar__nav .nav__list--feature {
+  display: none;
+  position: absolute;
+  top: 3rem;
+  padding: 0 1rem;
+  background-color: rgba(0, 0, 0, 0.75);
 }
 
 .navBar__burger {
@@ -650,7 +698,7 @@ a.pure-button-selected {
           transform: translateY(11px);
 }
 
-.navBar__burger--open .navBar__burger__icon {
+.navBar__burger.is-open .navBar__burger__icon {
   -webkit-transform: translateX(-30px);
           transform: translateX(-30px);
   background: transparent;
@@ -658,12 +706,12 @@ a.pure-button-selected {
           box-shadow: none;
 }
 
-.navBar__burger--open .navBar__burger__icon::before {
+.navBar__burger.is-open .navBar__burger__icon::before {
   -webkit-transform: rotate(45deg) translate(25px, -25px);
           transform: rotate(45deg) translate(25px, -25px);
 }
 
-.navBar__burger--open .navBar__burger__icon::after {
+.navBar__burger.is-open .navBar__burger__icon::after {
   -webkit-transform: rotate(-45deg) translate(25px, 25px);
           transform: rotate(-45deg) translate(25px, 25px);
 }

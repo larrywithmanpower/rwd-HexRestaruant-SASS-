@@ -16,6 +16,14 @@
     justify-content: space-evenly;
 }
 
+.jc-end {
+    justify-content: end;
+}
+
+.jc-center {
+    justify-content: center;
+}
+
 .ai-c {
     align-items: center;
 }
@@ -31,20 +39,61 @@
     font-weight: bold;
 }
 
+.ta-c {
+    text-align: center;
+}
+
 //  padding & margin
 
 .p-10 {
     padding: 10px;
 }
 
+.mr-10 {
+    margin-right: 10px;
+}
+
 .mr-30 {
     margin-right: 30px;
+}
+
+.ml-50 {
+    margin-left: 50px;
+}
+
+.ml-4r {
+    margin-left: 4rem;
+}
+
+.ml-5r {
+    margin-left: 5rem;
+}
+
+.mb-1r {
+    margin-bottom: 1rem;
+}
+.mb-2r {
+    margin-bottom: 2rem;
+}
+.m-m-0 {
+    margin: 0;
+}
+
+.p-m-0 {
+    @include pad {
+        padding: 0;
+    }
 }
 
 // z-index
 
 .z-99 {
     z-index: 99;
+}
+
+// is none
+.is-none {
+    display: none;
 }
 
 

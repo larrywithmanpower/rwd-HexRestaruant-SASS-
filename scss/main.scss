@@ -13,18 +13,23 @@
 
 // utils
 
+@import "utils/mixin";
 @import "utils/helpers";
 
 // vendors
 
 @import "vendors/pure";
-@import "utils/mixin";
+
 
 // layout
 
 @import "layout/navigation";
 @import "layout/header";
+@import "layout/content";
+@import "layout/footer";
 
+// pages
 
+@import "pages/index";
 
 // main

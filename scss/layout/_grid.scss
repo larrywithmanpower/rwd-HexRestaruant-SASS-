@@ -1,16 +1,17 @@
 
-
+// ! 變成平板以下解析度不能消掉旁邊留白:
+// !拿掉container及row的pl與pr好像就OK了
 .container{
     margin: 0 auto;
     max-width: 1024px;
-    padding-left: $gutter-width / 2;
-    padding-right: $gutter-width / 2;
+    // padding-left: $gutter-width / 2;
+    // padding-right: $gutter-width / 2;
 }
 
 .row{
     display: flex;
-    margin-left: -($gutter-width / 2);
-    margin-right: -($gutter-width / 2);
+    // margin-left: -($gutter-width / 2);
+    // margin-right: -($gutter-width / 2);
     flex-wrap: wrap;
 }
 
@@ -19,8 +20,8 @@
     min-height: 1px;
     max-width: 100%;
     flex: 0 0 100%;
-    padding-left: $gutter-width / 2;
-    padding-right: $gutter-width / 2;    
+    padding-left: $gutter-width / 2; 
+    padding-right: $gutter-width / 2;   
 }
 
 @for $i from 1 to $grid-num + 1 {
@@ -29,7 +30,7 @@
     }
 }
 
-@media (min-width: 767px) {
+@media (min-width: 768px) {
     @for $i from 1 to $grid-num + 1 {
         .col-#{$i} {
             max-width: 100% * ($i / $grid-num);

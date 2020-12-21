@@ -4,13 +4,13 @@ $(document).ready(function () {
         e.preventDefault();
         $('.navBar__burger').toggleClass('is-open'); 
         $('.navBar').toggleClass('is-show'); 
-        $('.navBar__nav__list--featureMb').removeClass('is-open');
+        $('.navBar__nav__list--dropdownMb').removeClass('is-open');
         
     });
 
-    $('.--feature').click(function (e) { 
+    $('.navBar__nav__list--show').click(function (e) { 
         e.preventDefault();
-        $('.navBar__nav__list--featureMb').toggleClass('is-open');
+        $('.navBar__nav__list--dropdownMb').toggleClass('is-open');
     });
 
 }); 

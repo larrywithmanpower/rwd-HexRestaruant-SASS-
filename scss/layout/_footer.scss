@@ -1,0 +1,49 @@
+.footer {
+    @include pad {
+        justify-content: space-around;
+        // ! 用響應式拉網頁大小效果出不來
+        // ! 直接點選ipad就OK
+    }
+    @include mobile {
+        flex-direction: column;
+    }
+
+    &--padNone {
+        @include pad {
+            display: none;
+        }
+        @include mobile {
+            display: block;
+        }
+    }
+
+    &__txt__link {
+        line-height: 1.5;
+        padding-left: .5rem;
+        color: $txt-primary;
+        a {
+            color: $txt-primary;
+            &:hover {
+                color: $form-txt-link;
+            }
+        }
+    }
+    &__logo {
+        @include hiddenTxt;
+        width: 243px;
+        height: 48px;
+        background: url(../images/logo_l@svg.svg) no-repeat;
+        margin-bottom: 10px;
+        @include pad {}
+    }
+    &__icon {
+        font-size: $fz-xxxl;
+        // ! 無法使用justify-content:end
+        &__link {
+            &:hover i{
+                color: red;
+            }
+        }    
+    
+    }
+}

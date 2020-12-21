@@ -1,0 +1,86 @@
+// ! 該如何針對此page命名
+
+.introduction {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    &__title {
+        font-weight: bold;
+        line-height: 1.2;
+        &--decLine {
+            display: block;
+            @include decorationLine(100px, 3px, $txt-primary, 0, 9rem, 9rem, 0);
+            @include mobile {
+                @include decorationLine(50px, 2px, $txt-primary, 0, 1rem, 1rem, 0);
+            }
+            @include other(350px) {
+                @include decorationLine(0, 0, $txt-primary, 0, 1rem, 1rem, 0);
+            }
+        }
+    }
+}
+
+.card__list {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    &__img {
+        display: block;
+        margin: 0 auto;
+        border-radius: 50%;
+        margin-bottom: 1rem;
+    }
+    &__title {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    @include pad {
+        max-width: 50%;
+    }
+    @include mobile {
+        max-width: 100%;
+    }
+
+    &--padNone {
+        @include pad {
+            display: none;
+        }
+        @include mobile {
+            display: block;
+        }
+    }
+}
+
+.news {
+    background: $bg-news;
+    color: $txt-secondary;   
+    margin-bottom: 2rem;
+
+    &__img {
+        @include pad {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        &--big {
+            @include pad {
+                display: none;
+            }
+        }
+        &--small {
+            display: none;
+            @include pad {
+                display: block;
+                width: 100%;
+            }
+        }        
+    }
+
+    &__title {
+        line-height: 2;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    &__txt {
+        margin-bottom: 1rem;
+        line-height: 1.4;
+    }
+}

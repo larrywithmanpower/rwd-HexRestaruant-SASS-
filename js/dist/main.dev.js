@@ -10,8 +10,9 @@ $(document).ready(function () {
   });
   $('.navBar__nav__list--show').click(function (e) {
     e.preventDefault();
-    $('.navBar__nav__list--dropdownMb').addClass('is-open');
+    $('.navBar__nav__list--dropdownMb').toggleClass('is-open');
   }); // ! 滑動完後重新點burgerMenu又會跳出來dropdownMb
+  // ! 少了$('.navBar__nav__list--dropdownMb').toggleClass('is-open');
 
   $("#btn-card,#btnPad-card").on("click", function () {
     $('html, body').animate({
@@ -19,6 +20,7 @@ $(document).ready(function () {
     }, 750);
     $('.navBar__burger').toggleClass('is-open');
     $('.navBar').toggleClass('is-show');
+    $('.navBar__nav__list--dropdownMb').toggleClass('is-open');
   });
   $("#btn-news,#btnPad-news").on("click", function () {
     $('html, body').animate({
@@ -26,6 +28,7 @@ $(document).ready(function () {
     }, 750);
     $('.navBar__burger').toggleClass('is-open');
     $('.navBar').toggleClass('is-show');
+    $('.navBar__nav__list--dropdownMb').toggleClass('is-open');
   });
   $("#btn-booking,#btnPad-booking").on("click", function () {
     $('html, body').animate({
@@ -33,5 +36,6 @@ $(document).ready(function () {
     }, 750);
     $('.navBar__burger').toggleClass('is-open');
     $('.navBar').toggleClass('is-show');
+    $('.navBar__nav__list--dropdownMb').toggleClass('is-open');
   });
 });

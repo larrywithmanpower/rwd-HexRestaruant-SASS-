@@ -1,4 +1,5 @@
 .footer {
+    padding-top: 2rem;
     @include pad {
         justify-content: space-around;
         // ! 用響應式拉網頁大小效果出不來
@@ -37,7 +38,7 @@
         @include pad {}
     }
     &__icon {
-        font-size: $fz-xxxl;
+        font-size: $fz-3xl;
         // ! 無法使用justify-content:end
         &__link {
             &:hover i{

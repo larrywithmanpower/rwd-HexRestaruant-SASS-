@@ -215,6 +215,20 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 .pure-form .pure-input-1-4 {
     width: 25%;
 }
+/* Aligned Forms */
+.pure-form-aligned .pure-control-group {
+    margin-bottom: 0.5em;
+}
+.pure-form-aligned .pure-control-group label {
+    text-align: right;
+    display: inline-block;
+    vertical-align: middle;
+    width: 2em;
+    margin: 0 1em 0 0;
+}
+.pure-form-aligned .pure-controls {
+    margin: 1.5em 0 0 11em;
+}
 /* ==========pure form end========== */
 /* ==========pure botton========== */
 /*csslint outline-none:false*/

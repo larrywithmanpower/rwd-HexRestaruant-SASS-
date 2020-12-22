@@ -1,86 +1,194 @@
 // ! 該如何針對此page命名
 
-.introduction {
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+.heading {
+    padding-top: 3.5rem;
+    padding-bottom: 1rem;
+
     &__title {
         font-weight: bold;
         line-height: 1.2;
+
         &--decLine {
             display: block;
-            @include decorationLine(100px, 3px, $txt-primary, 0, 9rem, 9rem, 0);
+            @include decorationLine(90px, 3px, $txt-primary, 0, 9rem, 9rem, 0);
+
             @include mobile {
-                @include decorationLine(50px, 2px, $txt-primary, 0, 1rem, 1rem, 0);
+                @include decorationLine(30px, 2px, $txt-primary, 0, 1rem, 1rem, 0);
             }
+
             @include other(350px) {
                 @include decorationLine(0, 0, $txt-primary, 0, 1rem, 1rem, 0);
             }
         }
     }
+
+    &--bgColor {
+        background-color: $bg-secondary;
+    }
 }
 
-.card__list {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    &__img {
-        display: block;
-        margin: 0 auto;
-        border-radius: 50%;
-        margin-bottom: 1rem;
-    }
-    &__title {
-        text-align: center;
-        margin-bottom: 1rem;
-    }
-    @include pad {
-        max-width: 50%;
-    }
-    @include mobile {
-        max-width: 100%;
-    }
+// * 上方card
+.card {
+    padding-top: .5rem;
+    padding-bottom: 2rem;
 
-    &--padNone {
+    &__list {
         @include pad {
-            display: none;
+            max-width: 50%;
         }
+
         @include mobile {
+            max-width: 100%;
+            margin-bottom: 1.6rem;
+        }
+
+        &__img {
             display: block;
+            margin: 0 auto;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
+
+        &__title {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+
+        &--padNone {
+            @include pad {
+                display: none;
+            }
+
+            @include mobile {
+                display: block;
+            }
         }
     }
 }
 
 .news {
     background: $bg-news;
-    color: $txt-secondary;   
-    margin-bottom: 2rem;
+    color: $txt-secondary;
 
     &__img {
         @include pad {
             padding-left: 0;
             padding-right: 0;
         }
+
         &--big {
             @include pad {
                 display: none;
             }
         }
+
         &--small {
             display: none;
+
             @include pad {
                 display: block;
                 width: 100%;
             }
-        }        
+        }
     }
 
     &__title {
         line-height: 2;
         margin-top: 2rem;
-        margin-bottom: 1rem;
+        margin-bottom: 0.2rem;
     }
 
     &__txt {
-        margin-bottom: 1rem;
+        margin-bottom: 1.25rem;
         line-height: 1.4;
     }
+}
+
+// * 下方小卡
+.cardSmall {
+
+    &__list {
+        @include pad {
+            display: flex;
+            flex: 50%;
+            max-width: 50%;
+        }
+        @include mobile {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+        &__img {
+            border-radius: 50%;
+            width: 67px;
+            height: 67px;
+        }
+        &__txt {
+            margin-top: 1.5rem;
+            line-height: 1.2;
+        }
+        &--padNone {
+            @include pad {
+            display: none;
+            }
+
+            @include mobile {
+            display: flex;
+            }
+        }
+    }
+}
+
+// * map
+.booking {
+    background-color: $bg-secondary;
+    padding-bottom: 2rem;
+    &__form {
+        &__img {
+            
+        }
+        &__title {
+            text-indent: .5rem;
+            padding-bottom: .2rem;
+            &--span {
+                display: block;
+                margin-bottom: 0.5rem;
+            }
+            &--radio {
+                text-align: left;                
+            }
+        }
+
+        &__input {
+            width: 100%;
+        }
+
+        &__btn {
+            justify-content: flex-end;
+            margin-top: 5.5rem;
+            &--primary {
+                background: $btn-primary;
+                margin-left: 1rem;
+                width: 25%;
+                @include pad {
+                    margin-left: 0;
+                    width: 100%;
+                }
+            }
+            &--secondary {
+                background: $btn-secondary;
+                width: 25%;
+                @include pad {
+                    margin-top: 1rem;
+                    width: 100%;
+                }
+            }
+            @include pad {
+                margin-top: 1rem;
+                flex-direction: column-reverse;
+            }
+        }
+        
+    }
+
 }

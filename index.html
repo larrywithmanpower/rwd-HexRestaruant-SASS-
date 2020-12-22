@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css
     ">
 </head>
+<!-- 格線系統使用問題，命名是要獨立還是可以放其他的class？ -->
 
 <body>
     <div class="container">
@@ -33,15 +34,15 @@
                                 <i class="fas fa-caret-down"></i>
                             </a>
                             <ul class="navBar__nav__list--dropdown">
-                                <li><a href="#">特色</a></li>
-                                <li><a href="#">主廚</a></li>
-                                <li><a href="#">地圖</a></li>
+                                <li><a href="#" id="btn-card">特色</a></li>
+                                <li><a href="#" id="btn-news">主廚</a></li>
+                                <li><a href="#" id="btn-booking">地圖</a></li>
                             </ul>
                         </li>
                         <!-- pad以下時使用下拉選單 -->
-                        <li class="navBar__nav__list--dropdownMb"><a href="#">特色</a></li>
-                        <li class="navBar__nav__list--dropdownMb"><a href="#">主廚</a></li>
-                        <li class="navBar__nav__list--dropdownMb"><a href="#">地圖</a></li>
+                        <li class="navBar__nav__list--dropdownMb"><a href="#" id="btnPad-card">特色</a></li>
+                        <li class="navBar__nav__list--dropdownMb"><a href="#" id="btnPad-news">主廚</a></li>
+                        <li class="navBar__nav__list--dropdownMb"><a href="#" id="btnPad-booking">地圖</a></li>
                         <li class="navBar__nav__list"><a href="cart.html">訂餐</a></li>
                         <li class="navBar__nav__list"><a href="login.html">登入</a></li>
                     </ul>
@@ -61,59 +62,152 @@
         </div>
 
         <!-- home -->
-        <div class="introduction row">
-            <div class="col-12">
-                <h3 class="introduction__title ta-c mb-1r">
-                    客人總是在詢問
-                    <span class="introduction__title--decLine">這麼好吃的秘訣是什麼</span>
-                </h3>  
-            </div>                      
-        </div>
-        <div class="card row jc-spar">
-            <div class="card__list col-4">
-                <img class="card__list__img" src="images/feature_1.png" alt="vegetable">
-                <h4 class="card__list__title">台灣本土蔬菜</h4>
-                <p>
-                    In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et
-                    elit eget elit facilisis tristique. Nam vel iaculis mauris.
-                </p>
+        <div class="content">
+            <!-- top card -->
+            <div class="heading row tagCard">
+                <div class="col-12">
+                    <h2 class="heading__title ta-c mb-1r">
+                        客人總是在詢問
+                        <span class="heading__title--decLine">這麼好吃的秘訣是什麼</span>
+                    </h2>
+                </div>
             </div>
-            <div class="card__list col-4">
-                <img class="card__list__img" src="images/feature_2.png" alt="chief">
-                <h4 class="card__list__title">專業米其林廚師</h4>
-                <p>
-                    Sed ullamcorper tellus erat, non ultrices sem tincidunt euismod. Fusce rhoncus porttitor velit,
-                    eu bibendum nibh aliquet vel. Fusce lorem leo, vehicula at nibh quis, facilisis accumsan turpis.
-                </p>
-            </div>
-            <div class="card__list col-4 card__list--padNone">
-                <img class="card__list__img" src="images/feature_3.png" alt="profassional">
-                <h4 class="card__list__title">對於專業不能退讓</h4>
-                <p>
-                    Fusce rhoncus porttitor velit, eu bibendum nibh aliquet vel. Fusce lorem leo, vehicula at nibh
-                    quis, facilisis accumsan turpis.
-                </p>
-            </div>
-        </div>
-        <div class="news row">
-            <div class="news__img col-6">
-                <img class="news__img--big" src="images/main_chef_gray_big.png" alt="chief picture big">
-                <img class="news__img--small" src="images/main_chef_gray_middle.png" alt="chief picture middle">
-            </div>
-            <div class="col-6">
-                <h4 class="news__title">今日主廚：帕金森、梅在帕</h4>
-                <p class="news__txt">Tody Chef: Plum in Shock</p>
-                <p class="news__txt">
-                    Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere vulputate. Etiam
-                    elit elit, elementum sed varius at, adipiscing vitae est. Sed nec felis pellentesque, lacinia dui
-                    sed, ultricies sapien. Pellentesque orci lectus, consectetur vel posuere posuere, rutrum eu ipsum.
-                    Aliquam eget odio sed ligula iaculis consequat at eget orci. Mauris molestie sit amet metus mattis
-                    varius. Donec sit amet ligula eget nisi sodales egestas. Aliquam interdum dolor aliquet dolor
-                    sollicitudin fermentum. Donec congue lorem a molestie bibendum.
-                </p>
-            </div>
-        </div>
+            <ul class="card row jc-spar">
+                <li class="card__list col-4">
+                    <img class="card__list__img" src="images/feature_1.png" alt="vegetable">
+                    <h3 class="card__list__title">台灣本土蔬菜</h3>
+                    <p>
+                        In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et
+                        elit eget elit facilisis tristique. Nam vel iaculis mauris.
+                    </p>
+                </li>
+                <li class="card__list col-4">
+                    <img class="card__list__img" src="images/feature_2.png" alt="chief">
+                    <h3 class="card__list__title">專業米其林廚師</h3>
+                    <p>
+                        Sed ullamcorper tellus erat, non ultrices sem tincidunt euismod. Fusce rhoncus porttitor velit,
+                        eu bibendum nibh aliquet vel. Fusce lorem leo, vehicula at nibh quis, facilisis accumsan turpis.
+                    </p>
+                </li>
+                <li class="card__list col-4 card__list--padNone">
+                    <img class="card__list__img" src="images/feature_3.png" alt="profassional">
+                    <h3 class="card__list__title">對於專業不能退讓</h3>
+                    <p>
+                        Fusce rhoncus porttitor velit, eu bibendum nibh aliquet vel. Fusce lorem leo, vehicula at nibh
+                        quis, facilisis accumsan turpis.
+                    </p>
+                </li>
+            </ul>
 
+            <div class="news row tagNews">
+                <div class="news__img col-6">
+                    <img class="news__img--big" src="images/main_chef_gray_big.png" alt="chief picture big">
+                    <img class="news__img--small" src="images/main_chef_gray_middle.png" alt="chief picture middle">
+                </div>
+                <div class="col-6">
+                    <h2 class="news__title">今日主廚：帕金森、梅在帕</h2>
+                    <p class="news__txt txt-lg">Tody Chef: Plum in Shock</p>
+                    <p class="news__txt">
+                        Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere vulputate.
+                        Etiam
+                        elit elit, elementum sed varius at, adipiscing vitae est. Sed nec felis pellentesque, lacinia
+                        dui
+                        sed, ultricies sapien. Pellentesque orci lectus, consectetur vel posuere posuere, rutrum eu
+                        ipsum.
+                        Aliquam eget odio sed ligula iaculis consequat at eget orci. Mauris molestie sit amet metus
+                        mattis
+                        varius. Donec sit amet ligula eget nisi sodales egestas. Aliquam interdum dolor aliquet dolor
+                        sollicitudin fermentum. Donec congue lorem a molestie bibendum.
+                    </p>
+                </div>
+            </div>
+            <!-- smll card -->
+            <div class="heading row">
+                <div class="col-12">
+                    <h2 class="heading__title ta-c mb-1r">聽聽別人感想</h2>
+                </div>
+            </div>
+            <ul class="cardSmall row mb-2r">
+                <li class="cardSmall__list cardSmall__list--padNone col-4  d-flex">
+                    <img class="cardSmall__list__img mr-10" src="images/avatar_1.png" alt="越南">
+                    <div class="cardSmall__list__txt">
+                        <h3 class="tw-b mb-1r">高雄一口吃</h3>
+                        <p class="mb-1r">
+                            自從吃了這家餐廳以後，我口水連續流了一個多月都沒停，下次不要再被我遇到，不然我一定連他們桌子都啃下去。
+                        </p>
+                        <span class="fl-r clearfix">-- 產品經理</span>
+                    </div>
+                </li>
+                <li class="cardSmall__list col-4 d-flex">
+                    <img class="cardSmall__list__img mr-10" src="images/avatar_2.png" alt="西洋">
+                    <div class="cardSmall__list__txt">
+                        <h3 class="tw-b mb-1r">廟口小霸王</h3>
+                        <p class="mb-1r">
+                            自從吃了這家餐廳以後，我口水連續流了一個多月都沒停，下次不要再被我遇到，不然我一定連他們桌子都啃下去。
+                        </p>
+                        <span class="fl-r clearfix">-- 金身道士</span>
+                    </div>
+                </li>
+                <li class="cardSmall__list col-4 d-flex">
+                    <img class="cardSmall__list__img mr-10" src="images/avatar_3.png" alt="女子">
+                    <div class="cardSmall__list__txt">
+                        <h3 class="tw-b mb-1r">春天也來了</h3>
+                        <p class="mb-1r">
+                            自從吃了這家餐廳以後，我口水連續流了一個多月都沒停，下次不要再被我遇到，不然我一定連他們桌子都啃下去。
+                        </p>
+                        <span class="fl-r clearfix">-- 美麗萬分</span>
+                    </div>
+                </li>
+            </ul>
+
+            <!-- map -->
+            <div class="heading heading--bgColor row tagBooking">
+                <div class="col-12">
+                    <h2 class="heading__title ta-c mb-1r">
+                        我們的位置不太夠坐 <br>
+                        要不要先定位呢？
+                    </h2>
+                </div>
+            </div>
+            <div class="booking row">
+                <div class="booking__img col-6">
+                    <img class="" src="images/Map.png" alt="map">
+                </div>
+                <form class="booking__form col-6 pure-form pure-form-stacked pure-form-aligned">
+                    <ul>
+                        <li class="mb-1r">
+                            <label class="booking__form__title" for="tel">電話</label>
+                            <input class="booking__form__input" type="tel" id="tel" placeholder="02-1234567" />
+                        </li>
+                        <li class="mb-1r">
+                            <label class="booking__form__title" for="email">信箱</label>
+                            <input class="booking__form__input" type="email" id="email" placeholder="test@gmail.com" />
+                        </li>
+                        <li class="mb-1r">
+                            <label class="booking__form__title" for="number">人數</label>
+                            <input class="booking__form__input" type="number" id="number" placeholder="幾位呢？" />
+                        </li>
+                        <li class="mb-1r pure-control-group">
+                            <span class="booking__form__title--span">是否需要素食？</span>
+                            <label class="booking__form__title booking__form__title--radio"
+                                for="Vegetarian yes">是</label>
+                            <input class="booking__form__radio" class="veg" type="radio" name="Vegetarian food"
+                                id="Vegetarian yes">
+                            <label class="booking__form__title booking__form__title--radio"
+                                for="Vegetarian no">否</label>
+                            <input class="booking__form__radio" class="veg" type="radio" name="Vegetarian food"
+                                id="Vegetarian no">
+                        </li>
+                        <li class="booking__form__btn d-flex">
+                            <button type="submit"
+                                class="booking__form__btn--secondary pure-button pure-button-primary">取消</button>
+                            <button type="submit"
+                                class="booking__form__btn--primary pure-button pure-button-primary">送出</button>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </div>
 
 
         <div class="footer row d-flex jc-spab">

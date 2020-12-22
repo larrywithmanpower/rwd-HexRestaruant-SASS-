@@ -1,3 +1,4 @@
+
 // flex
 
 .d-flex {
@@ -33,14 +34,68 @@
     clear: both;
 }
 
+// float
+
+.fl-r {
+    float: right;
+}
+
 // txt type
 
-.txt-w {
+.tw-b {
     font-weight: bold;
 }
 
 .ta-c {
     text-align: center;
+}
+
+.ta-r {
+    text-align: right;
+}
+
+.ta-l {
+    text-align: left;
+}
+
+.txt-xs {
+    font-size: $fz-xs;
+}
+
+.txt-sm {
+    font-size: $fz-sm;
+}
+
+.txt-base {
+    font-size: $fz-base;
+}
+
+.txt-lg {
+    font-size: $fz-lg;
+}
+
+.txt-xl {
+    font-size: $fz-xl;
+}
+
+.txt-2xl {
+    font-size: $fz-2xl;
+}
+
+.txt-3xl {
+    font-size: $fz-3xl;
+}
+
+.txt-4xl {
+    font-size: $fz-4xl;
+}
+
+.txt-5xl {
+    font-size: $fz-5xl;
+}
+
+.txt-6xl {
+    font-size: $fz-6xl;
 }
 
 //  padding & margin
@@ -72,16 +127,29 @@
 .mb-1r {
     margin-bottom: 1rem;
 }
+
 .mb-2r {
     margin-bottom: 2rem;
 }
+
 .m-m-0 {
     margin: 0;
 }
 
-.p-m-0 {
+.pl-0 {
+    padding-left: 0;
+}
+
+.pr-0 {
+    padding-right: 0;
+}
+
+.plr-0 {
+    padding-left: 0;
+    padding-right: 0;
     @include pad {
-        padding: 0;
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
@@ -90,10 +158,4 @@
 .z-99 {
     z-index: 99;
 }
-
-// is none
-.is-none {
-    display: none;
-}
-
 

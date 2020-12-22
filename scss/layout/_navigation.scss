@@ -5,6 +5,11 @@
     margin-left: -15px;
     margin-bottom: 3.5rem;
     padding: 0 1rem;
+    @include pad {
+        position: fixed;
+        width: 100%;
+        
+    }
 
     @include pad {
         padding-bottom: 1rem;

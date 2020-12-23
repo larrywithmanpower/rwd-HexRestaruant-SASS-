@@ -2,8 +2,13 @@
 
 @import "utils/variable";
 
+// mixin
+
+@import "utils/mixin";
+
 // base
 
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
 @import "base/reset";
 @import "base/base";
 
@@ -13,7 +18,7 @@
 
 // utils
 
-@import "utils/mixin";
+
 @import "utils/helpers";
 
 // vendors
@@ -31,4 +36,7 @@
 // pages
 
 @import "pages/index";
+@import "pages/login";
+@import "pages/register";
+@import "pages/cart";
 

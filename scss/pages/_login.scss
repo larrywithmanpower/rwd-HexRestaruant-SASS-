@@ -1,0 +1,41 @@
+.login {
+    @include other(767px) {
+        padding: 0 5%;
+    }
+    &__form {
+        padding: 1% 2%;
+        border-top: 5px solid #FF5E45;
+        box-shadow: 2px 2px 2px rgb(199, 198, 198);
+        &__label {
+            padding-top: 1.5rem;
+            &--iconEmail {
+                @include fontawosomeIn(27px, 10px, "\f007", $txt-primary);
+            }
+            &--iconPsw {
+                @include fontawosomeIn(52px, 10px, "\f023", $txt-primary);
+            }
+        }
+        &__input {
+            width: 100%;
+            text-indent: 20px;
+        }
+        &__link {
+            color: $form-txt-link;
+            &:hover {
+                color: $txt-link;
+            }
+        }
+        &__btn {
+            text-align: center;
+            &--primary {
+                color: $txt-secondary;
+                background-color: $btn-primary;
+            }
+
+            &--secondary {
+                color: $txt-secondary;
+                background-color: $btn-secondary;
+            }
+        }
+    }
+}

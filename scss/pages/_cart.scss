@@ -1,0 +1,105 @@
+.cart {
+    padding: 3% 3%;
+
+}
+
+.sideBar {
+    &__title {
+        margin-bottom: 1rem;
+        font-weight: bold;
+
+        .fa-hamburger {
+            margin-right: 1rem;
+        }
+    }
+
+    &__list a {
+        display: block;
+        padding: 10px;
+        font-weight: bold;
+        color: $txt-primary;
+        border-bottom: 1.5px solid $txt-primary;
+        text-align: center;
+
+        &:hover {
+            background-color: $bg-hover;
+            color: $txt-link;
+        }
+    }
+}
+
+.main {
+    position: relative;
+
+    &__toolbar {
+
+        &__btn {
+            display: inline-block;
+            width: 500px;
+            height: 50px;
+            border-radius: 5px;
+            background-color: $txt-primary;
+            border: 2px solid $txt-primary;
+            color: $txt-link;
+            &:hover {
+                background: $bg-primary;
+                color: $txt-primary;
+            }
+
+            @include pad {}
+
+            &__search {
+                width: 92%;
+                height: 46px;
+                background-color: $bg-primary;
+            }
+        }
+    }
+
+    &__link {
+        color: $txt-primary;
+        font-size: $fz-2xl;
+        font-weight: bold;
+
+        &--line {
+            margin-right: 30px;
+            position: absolute;
+            top: 12px;
+            right: 50px;
+
+            &::after {
+                position: absolute;
+                content: '';
+                width: 5px;
+                height: 30px;
+                margin-left: 15px;
+                border-right: 3px solid $txt-primary;
+            }
+        }
+        &__number {
+            position: absolute;
+            top: -8px;
+            right: -10px;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            line-height: 1.4;
+            color: $txt-secondary;
+            border-radius: 50%;
+            background-color: $form-txt-link;
+        }
+        &--iconCart {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+        }
+    }
+
+    .fa-search {
+        padding-top: .9rem;
+        margin-left: .6rem;
+    }
+
+
+
+}

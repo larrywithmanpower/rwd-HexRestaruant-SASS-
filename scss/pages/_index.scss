@@ -144,12 +144,11 @@
     background-color: $bg-secondary;
     padding-bottom: 2rem;
     &__form {
-        &__img {
-            
-        }
+        
         &__title {
-            text-indent: .5rem;
+            text-indent: .2rem;
             padding-bottom: .2rem;
+            cursor: pointer;
             &--span {
                 display: block;
                 margin-bottom: 0.5rem;
@@ -166,24 +165,33 @@
         &__btn {
             justify-content: flex-end;
             margin-top: 5.5rem;
+            @include pad {
+                margin-top: 0;
+            }
+            
             &--primary {
                 background: $btn-primary;
                 margin-left: 1rem;
                 width: 25%;
+                
                 @include pad {
-                    margin-left: 0;
+                    margin-left: 1rem;
                     width: 100%;
+                }
+                @include mobile {
+                    margin-left: 0;
+                    margin-bottom: 1rem;
                 }
             }
             &--secondary {
                 background: $btn-secondary;
                 width: 25%;
+                
                 @include pad {
-                    margin-top: 1rem;
                     width: 100%;
                 }
             }
-            @include pad {
+            @include mobile {
                 margin-top: 1rem;
                 flex-direction: column-reverse;
             }

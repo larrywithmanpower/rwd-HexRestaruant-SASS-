@@ -29,6 +29,12 @@
     align-items: center;
 }
 
+// arrange
+
+.m0-auto {
+    margin: 0 auto;
+}
+
 // clearfix
 .clearfix {
     clear: both;
@@ -57,6 +63,8 @@
 .ta-l {
     text-align: left;
 }
+
+// font-size
 
 .txt-xs {
     font-size: $fz-xs;
@@ -98,6 +106,24 @@
     font-size: $fz-6xl;
 }
 
+// txt color
+.txtPrimary {
+    color: $txt-primary;
+}
+.txtSecondary {
+    color: $txt-secondary;
+}
+.formTxtLink {
+    color: $form-txt-link;
+}
+.txtLink {
+    color: $txt-link;
+}
+.txtHover {
+    color: $txt-hover;
+}
+
+
 //  padding & margin
 
 .p-10 {
@@ -106,6 +132,9 @@
 
 .mr-10 {
     margin-right: 10px;
+}
+.ml-10 {
+    margin-left: 10px;
 }
 
 .mr-30 {
@@ -136,6 +165,9 @@
     margin: 0;
 }
 
+.pr-10 {
+    padding-right: 10px;
+}
 .pl-0 {
     padding-left: 0;
 }
@@ -159,3 +191,7 @@
     z-index: 99;
 }
 
+// none
+.is-none {
+    display: none;
+}

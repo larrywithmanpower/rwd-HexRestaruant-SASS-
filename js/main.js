@@ -14,7 +14,6 @@ $(document).ready(function () {
     });
 
     $('.content').click(function (e) { 
-        e.preventDefault();
         $('.navBar').removeClass('is-show'); 
         $('.navBar__nav__list--dropdownMb').removeClass('is-open');
     });

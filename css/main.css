@@ -1352,7 +1352,7 @@ a.pure-button-selected {
 
 .login__form {
   padding: 1% 2%;
-  border-top: 5px solid #FF5E45;
+  border-top: 5px solid #ff5e45;
   -webkit-box-shadow: 2px 2px 2px #c7c6c6;
           box-shadow: 2px 2px 2px #c7c6c6;
 }

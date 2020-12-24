@@ -11,6 +11,11 @@ $(document).ready(function () {
   $('.navBar__nav__list--show').click(function (e) {
     e.preventDefault();
     $('.navBar__nav__list--dropdownMb').toggleClass('is-open');
+  });
+  $('.content').click(function (e) {
+    e.preventDefault();
+    $('.navBar').removeClass('is-show');
+    $('.navBar__nav__list--dropdownMb').removeClass('is-open');
   }); // ! 滑動完後重新點burgerMenu又會跳出來dropdownMb
   // ! 少了$('.navBar__nav__list--dropdownMb').toggleClass('is-open');
 

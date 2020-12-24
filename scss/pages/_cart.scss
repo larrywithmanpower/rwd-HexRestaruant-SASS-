@@ -1,9 +1,11 @@
 .cart {
-    padding: 3% 3%;
+    padding: 3% 1%;
 
 }
 
 .sideBar {
+    text-align: center;
+
     &__title {
         margin-bottom: 1rem;
         font-weight: bold;
@@ -19,7 +21,7 @@
         font-weight: bold;
         color: $txt-primary;
         border-bottom: 1.5px solid $txt-primary;
-        text-align: center;
+
 
         &:hover {
             background-color: $bg-hover;
@@ -32,50 +34,69 @@
     position: relative;
 
     &__toolbar {
-
+        @include mobile {
+            margin-top: 1rem;
+        }
         &__btn {
             display: inline-block;
-            width: 500px;
+            width: 450px;
             height: 50px;
             border-radius: 5px;
             background-color: $txt-primary;
             border: 2px solid $txt-primary;
             color: $txt-link;
+
             &:hover {
                 background: $bg-primary;
                 color: $txt-primary;
             }
 
-            @include pad {}
+            @include pad {
+                width: 100%;
+            }
 
             &__search {
-                width: 92%;
+                width: 89%;
                 height: 46px;
                 background-color: $bg-primary;
             }
         }
     }
+    // * 放大鏡調整
+    .fa-search {
+        padding-top: .8rem;
+        margin-left: .8rem;
+        @include mobile {
+            margin-left: .5rem;
+        }
+    }
 
     &__link {
         color: $txt-primary;
-        font-size: $fz-2xl;
+        font-size: $fz-lg;
         font-weight: bold;
-
         &--line {
-            margin-right: 30px;
+            margin-right: 20px;
             position: absolute;
-            top: 12px;
-            right: 50px;
+            top: 15px;
+            right: 65px;
+            @include pad {
+                top: 4.3rem;
+            }
+            @include mobile {
+                top: 5.5rem;
+            }
 
             &::after {
                 position: absolute;
                 content: '';
-                width: 5px;
-                height: 30px;
-                margin-left: 15px;
+                width: 2px;
+                height: 20px;
+                margin-left: 8px;
                 border-right: 3px solid $txt-primary;
             }
         }
+
         &__number {
             position: absolute;
             top: -8px;
@@ -88,18 +109,126 @@
             border-radius: 50%;
             background-color: $form-txt-link;
         }
+
         &--iconCart {
             position: absolute;
             top: 12px;
-            right: 12px;
+            right: 37px;
+            font-size: $fz-2xl;
+            @include pad {
+                top: 4rem;
+            }
+            @include mobile {
+                top: 5rem;
+            }
         }
     }
 
-    .fa-search {
-        padding-top: .9rem;
-        margin-left: .6rem;
+    
+}
+
+.product {
+    text-align: center;
+    align-items: center;
+    padding-top: 2rem;
+    flex-wrap: wrap;
+    @include pad {
+        padding-top: 4rem;
     }
 
+    &__list {
+        position: relative;
+        margin-bottom: 30px;
+        box-shadow: 5px 5px 5px rgb(204, 202, 202);
+        border-radius: 5px;
+
+        &__img {
+            @include mobile {
+                width: 100%;
+            }
+        }
+        &--iconHeart {
+            position: absolute;
+            top: 5px;
+            left: 5px;
+        }
+
+        &__title {
+            margin: 1rem 0;
+        }
+
+        &__addCart {
+            margin: 1rem auto;
+            width: 90%;
+            margin-bottom: 10px;
+            padding: 5px 0;
+            color: $txt-addCart;
+            border: 2px solid $txt-addCart;
+            border-radius: 5px;
+            &:hover {
+                color: $txt-hover-addCart;
+                background: $bg-addCart;
+            }
+        }
 
 
+        // * hot tag
+
+        .hot {
+            content: '';
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            width: 80px;
+            height: 80px;
+            overflow: hidden;
+
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                display: block;
+                z-index: 9;
+                border-style: solid;
+            }
+
+            &::before {
+                top: -5px;
+                left: 0;
+                border-width: 5px 6px;
+                border-color: transparent transparent #078f6d transparent;
+            }
+
+            &::after {
+                bottom: 0;
+                right: -5px;
+                border-width: 6px 5px;
+                border-color: transparent transparent transparent #078f6d;
+            }
+
+            &__txt {
+                display: block;
+                position: absolute;
+                top: 15px;
+                left: -15px;
+                width: 130px;
+                padding: 5px 0;
+                text-align: center;
+                color: #fff;
+                font-size: 14px;
+                font-weight: 900;
+                background-color: #0c9;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+                transform: rotate(45deg);
+            }
+
+        }
+    }
+}
+
+.underLine {
+    display: inline-block;
+    width: 6rem;
+    height: 3px;
+    border-bottom: 1px solid $txt-primary;
 }

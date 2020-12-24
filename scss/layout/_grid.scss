@@ -36,5 +36,28 @@
             max-width: 100% * ($i / $grid-num);
             flex: 0 0 (100% * ($i / $grid-num));
         }
+    }    
+}
+
+.col-special {
+    position: relative;
+    min-height: 1px;
+    max-width: 100%;
+    flex: 0 0 100%;        
+}
+
+@media (min-width: 415px) {
+    .col-special {
+        max-width: 47%;
+        flex: 0 0 50%;
+        margin-right: 3%;
+        
+    }
+}
+@media (min-width: 769px) {
+    .col-special {
+        max-width: 30%;
+        flex: 0 0 33%;
+        margin-right: 20px;
     }
 }

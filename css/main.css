@@ -1344,6 +1344,10 @@ a.pure-button-selected {
   }
 }
 
+.login {
+  margin-bottom: 3rem;
+}
+
 @media (max-width: 767px) {
   .login {
     padding: 0 5%;
@@ -1420,6 +1424,7 @@ a.pure-button-selected {
 
 .register__form {
   margin: 0 auto;
+  margin-bottom: 3rem;
   padding: 2% 2%;
   border-top: 5px solid #FF5E45;
   -webkit-box-shadow: 2px 2px 2px #c7c6c6;

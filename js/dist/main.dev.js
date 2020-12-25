@@ -15,6 +15,10 @@ $(document).ready(function () {
   $('.content').click(function (e) {
     $('.navBar').removeClass('is-show');
     $('.navBar__nav__list--dropdownMb').removeClass('is-open');
+  }); // cancle a tag function
+
+  $('.product__list--iconHeart').click(function (e) {
+    e.preventDefault();
   }); // ! 滑動完後重新點burgerMenu又會跳出來dropdownMb
   // ! 少了$('.navBar__nav__list--dropdownMb').toggleClass('is-open');
 

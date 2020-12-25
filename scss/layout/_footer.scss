@@ -1,9 +1,11 @@
 .footer {
     padding-top: 2rem;
+    padding-left: 2%;
     @include pad {
         justify-content: space-around;
         // ! 用響應式拉網頁大小效果出不來
         // ! 直接點選ipad就OK
+        padding-left: 0;
     }
     @include mobile {
         flex-direction: column;
@@ -42,8 +44,12 @@
         @include pad {}
     }
     &__icon {
-        font-size: $fz-3xl;
+        font-size: $fz-5xl;
         // ! 無法使用justify-content:end
+        padding-left: 6rem;
+        @include mobile {
+            padding-left: .1rem;
+        }
         &__link {
             &:hover i{
                 color: red;

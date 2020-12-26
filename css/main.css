@@ -1626,7 +1626,7 @@ a.pure-button-selected {
 }
 
 .toolbar__link--line {
-  margin-right: 20px;
+  padding-right: 20px;
   color: #3D1101;
 }
 
@@ -1642,7 +1642,7 @@ a.pure-button-selected {
 .toolbar__link__number {
   position: absolute;
   top: 0;
-  right: -10px;
+  right: .3rem;
   width: 20px;
   height: 20px;
   text-align: center;
@@ -1654,8 +1654,7 @@ a.pure-button-selected {
 
 @media (max-width: 768px) {
   .toolbar__link__number {
-    top: -7px;
-    right: .3rem;
+    top: -.5rem;
   }
 }
 

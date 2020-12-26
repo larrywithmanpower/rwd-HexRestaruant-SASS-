@@ -76,18 +76,23 @@
                     </ul>
                 </div>
                 <div class="main col-8">
-                    <form class="main__toolbar pure-form">
-                        <a href="#" class="main__toolbar__btn">
-                            <input type="search" class="main__toolbar__btn__search pure-input-rounded txt-lg"
-                                placeholder="找餐點‧‧‧" />
-                            <i class="fas fa-search"></i>
-                        </a>
-                        <a href="#" class="main__link main__link--line ml-4r">結帳去</a>
-                        <a href="#" class="main__link main__link--iconCart">
-                            <i class="fas fa-shopping-cart"></i>
-                            <span class="main__link__number txt-sm">3</span>
-                        </a>
-                    </form>
+                    <div class="toolbar d-flex jcspab">
+                        <form class="toolbar__form pure-form">
+                            <input type="search" class="toolbar__form__search pure-input-rounded txt-lg"
+                            placeholder="找餐點‧‧‧" />
+                            <button type="submit" class="toolbar__form__btn">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </form>
+                        <div class="toolbar__link d-flex ai-c">
+                            <a href="#" class="toolbar__link--line ml-4r">結帳去</a>
+                            <a href="#" class="toolbar__link--iconCart">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="toolbar__link__number txt-sm">3</span>
+                            </a>
+                        </div>
+                    </div>
+                    
                     <ul class="product row">
                         <li class="product__list col-special">
                             <img class="product__list__img" src="images/product_1.png" alt="1">

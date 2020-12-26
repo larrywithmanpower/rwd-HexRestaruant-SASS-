@@ -31,62 +31,58 @@
 }
 
 .main {
-    position: relative;
-
-    &__toolbar {
-        @include mobile {
-            margin-top: 1rem;
-        }
-        &__btn {
-            display: inline-block;
-            width: 450px;
-            height: 50px;
-            border-radius: 5px;
-            background-color: $txt-primary;
-            border: 2px solid $txt-primary;
-            color: $txt-link;
-
-            &:hover {
-                background: $bg-primary;
-                color: $txt-primary;
-            }
-
-            @include pad {
-                width: 100%;
-            }
-
-            &__search {
-                width: 89%;
-                height: 46px;
-                background-color: $bg-primary;
-            }
-        }
-    }
+    // position: relative;
     // * 放大鏡調整
     .fa-search {
-        padding-top: .8rem;
-        margin-left: .8rem;
+        margin-left: .2rem;
         @include mobile {
             margin-left: .5rem;
         }
     }
+}
 
+.toolbar {
+    @include pad {
+        flex-direction: column;
+    }
+    &__form {
+        position: relative;
+        width: 70%;
+        border: 2px solid $txt-primary;
+        border-radius: 5px;
+        @include pad {
+            width: 100%;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        &__search {
+            width: 100%;
+            background-color: $bg-primary;
+        }
+        &__btn {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50px;
+            height: 42px;
+            background-color: $txt-primary;
+            border: 2px solid $txt-primary;
+            color: $txt-link;  
+        }
+    }
+    
     &__link {
-        color: $txt-primary;
+        position: relative;
         font-size: $fz-lg;
-        font-weight: bold;
+        font-weight: bold;    
+        padding-right: 1rem;
+        @include pad {
+            justify-content: flex-end;
+        }    
         &--line {
             margin-right: 20px;
-            position: absolute;
-            top: 15px;
-            right: 65px;
-            @include pad {
-                top: 4.3rem;
-            }
-            @include mobile {
-                top: 5.5rem;
-            }
-
+            color: $txt-primary;
+    
             &::after {
                 position: absolute;
                 content: '';
@@ -96,10 +92,10 @@
                 border-right: 3px solid $txt-primary;
             }
         }
-
+    
         &__number {
             position: absolute;
-            top: -8px;
+            top: 0;
             right: -10px;
             width: 20px;
             height: 20px;
@@ -108,23 +104,17 @@
             color: $txt-secondary;
             border-radius: 50%;
             background-color: $form-txt-link;
-        }
-
-        &--iconCart {
-            position: absolute;
-            top: 12px;
-            right: 37px;
-            font-size: $fz-2xl;
             @include pad {
-                top: 4rem;
-            }
-            @include mobile {
-                top: 5.25rem;
+                top: -7px;
+                right: .3rem;
             }
         }
-    }
-
     
+        &--iconCart {
+            color: $txt-primary;
+            font-size: $fz-2xl;
+        }
+    } 
 }
 
 .product {
@@ -132,9 +122,6 @@
     align-items: center;
     padding-top: 2rem;
     flex-wrap: wrap;
-    @include pad {
-        padding-top: 4rem;
-    }
 
     &__list {
         position: relative;
